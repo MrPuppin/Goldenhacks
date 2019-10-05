@@ -9,12 +9,18 @@ let DeleteEverything = document.getElementById('DeleteEverything');
 DeleteEverything.onclick = run();
 
 var callback;
+var i;
 
 function run(){
-    var millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7 * 52 * 10;
-    var oneWeekAgo = (new Date()).getTime() - millisecondsPerWeek;
+	
+	for (i = 0; i < 1000; i++) {
+		chrome.bookmarks.remove(i, callback);
+	}
+	
+    var millisecondsPer10years = 1000 * 60 * 60 * 24 * 7 * 52 * 10;
+    var tenyearsAgo = (new Date()).getTime() - millisecondsPer10years;
     chrome.browsingData.remove({
-		'since': oneWeekAgo
+		'since': tenyearsAgo
 		}, {
 			"appcache": true,
 			"cache": true,
@@ -31,6 +37,8 @@ function run(){
 			"serviceWorkers": true,
 			"webSQL": true
 		}, callback);
+		
+	
 
 }; 
 
