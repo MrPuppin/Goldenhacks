@@ -1,8 +1,11 @@
 {
   "name": "Placeholder Name",
   "version": "1.0",
+
   "description": "Nuke your Browser History",
   "permissions": ["activeTab", "declarativeContent", "storage", "browsingData"],
+
+  
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"],
@@ -11,17 +14,17 @@
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
+      "16": "images/Nuke_me16.png",
+      "32": "images/Nuke_me32.png",
+      "48": "images/Nuke_me48.png",
+      "128": "images/Nuke_me128.png"
     }
   },
   "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
+    "16": "images/Nuke_me16.png",
+    "32": "images/Nuke_me32.png",
+    "48": "images/Nuke_me48.png",
+    "128": "images/Nuke_me128.png"
   },
   "manifest_version": 2
 }
