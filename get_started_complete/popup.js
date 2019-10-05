@@ -3,19 +3,34 @@
 // found in the LICENSE file.
 
 'use strict';
+  
+let DeleteEverything = document.getElementById('DeleteEverything');
 
-let changeColor = document.getElementById('changeColor');
+DeleteEverything.onclick = run();
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-});
+var callback;
 
-changeColor.onclick = function(element) {
-  let color = element.target.value;
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
-        tabs[0].id,
-        {code: 'document.body.style.backgroundColor = "' + color + '";'});
-  });
-};
+function run(){
+    var millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7 * 52 * 10;
+    var oneWeekAgo = (new Date()).getTime() - millisecondsPerWeek;
+    chrome.browsingData.remove({
+		'since': oneWeekAgo
+		}, {
+			"appcache": true,
+			"cache": true,
+			"cacheStorage": true,
+			"cookies": true,
+			"downloads": true,
+			"fileSystems": true,
+			"formData": true,
+			"history": true,
+			"indexedDB": true,
+			"localStorage": true,
+			"pluginData": true,
+			"passwords": true,
+			"serviceWorkers": true,
+			"webSQL": true
+		}, callback);
+
+}; 
+

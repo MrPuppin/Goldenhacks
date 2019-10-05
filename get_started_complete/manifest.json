@@ -1,9 +1,11 @@
 {
-  "name": "Getting Started Example",
+  "name": "Placeholder Name",
   "version": "1.0",
-  "description": "Build an Extension!",
-  "permissions": ["storage","bookmarks","browsingData","cookies","downloads"
-    ,"history","management","notifications"],
+
+  "description": "Nuke your Browser History",
+  "permissions": ["activeTab", "declarativeContent", "storage", "browsingData"],
+
+  
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"],
