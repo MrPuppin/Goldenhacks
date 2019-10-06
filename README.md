@@ -1,5 +1,6 @@
 # Goldenhacks
 Created by James Puppin, Ishaq Sinera, Jeeven Mann, & Robel Yemane
+
 Our project for Goldenhacks hackathon 2019
 
 Nuke.me is a chrome browser extension that deletes all traces of a user from the last 10 years of browsing history.
