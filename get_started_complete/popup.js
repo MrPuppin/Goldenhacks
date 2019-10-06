@@ -11,11 +11,9 @@ DeleteEverything.onclick = run();
 var callback;
 var i;
 
+chrome.tts.speak('Caution');
+
 function run(){
-	
-	for (i = 0; i < 1000; i++) {
-		chrome.bookmarks.remove(i, callback);
-	}
 	
     var millisecondsPer10years = 1000 * 60 * 60 * 24 * 7 * 52 * 10;
     var tenyearsAgo = (new Date()).getTime() - millisecondsPer10years;
