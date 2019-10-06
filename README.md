@@ -1,4 +1,4 @@
-# Goldenhacks
+# Nuke.me
 Created by James Puppin, Ishaq Sinera, Jeeven Mann, & Robel Yemane
 
 Our project for Goldenhacks hackathon 2019
