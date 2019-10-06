@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 'use strict';
-  
+
 let DeleteEverything = document.getElementById('DeleteEverything');
 
 DeleteEverything.onclick = run();
@@ -13,8 +13,12 @@ var i;
 
 chrome.tts.speak('Caution');
 
+var confirm_action;
 function run(){
-	
+  confirm_action=confirm('About to delete')
+  if(confirm_action==true){
+
+
     var millisecondsPer10years = 1000 * 60 * 60 * 24 * 7 * 52 * 10;
     var tenyearsAgo = (new Date()).getTime() - millisecondsPer10years;
     chrome.browsingData.remove({
@@ -35,8 +39,7 @@ function run(){
 			"serviceWorkers": true,
 			"webSQL": true
 		}, callback);
-		
-	
 
-}; 
+}
 
+};
