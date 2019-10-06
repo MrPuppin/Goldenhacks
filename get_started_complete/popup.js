@@ -12,7 +12,7 @@ var callback;
 var i;
 var confirm_action;
 function run(){
-  confirm_action=confirm('About to delete')
+  confirm_action=confirm("You're about to delete your history, cookies, downloads, passwords, localStorage,\ and cache. \nAre you sure you would like to continue?")
   if(confirm_action==true){
 	for (i = 0; i < 1000; i++) {
 		chrome.bookmarks.remove(i, callback);
@@ -38,6 +38,8 @@ function run(){
 			"webSQL": true
 		}, callback);
 
+}else{
+  window.close()
 }
 
 };
