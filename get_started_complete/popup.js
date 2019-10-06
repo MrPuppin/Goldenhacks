@@ -15,7 +15,7 @@ chrome.tts.speak('Caution');
 
 var confirm_action;
 function run(){
-  confirm_action=confirm('About to delete')
+  confirm_action=confirm("You're about to delete your history, cookies, downloads, passwords, localStorage,\ and cache. \nAre you sure you would like to continue?")
   if(confirm_action==true){
 
 
@@ -40,6 +40,8 @@ function run(){
 			"webSQL": true
 		}, callback);
 
+}else{
+  window.close()
 }
 
 };

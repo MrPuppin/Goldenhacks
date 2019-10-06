@@ -1,11 +1,11 @@
 {
-  "name": "NUKE.ME",
+  "name": "Nuke.me",
   "version": "1.0",
 
   "description": "Nuke your Browser History",
   "permissions": ["activeTab", "declarativeContent", "storage", "browsingData", "bookmarks", "tts"],
 
-  
+
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"],
